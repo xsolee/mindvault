@@ -1,0 +1,6 @@
+# CI jobs will be defined in a later implementation task.
+name: CI
+
+on: []
+
+jobs: {}

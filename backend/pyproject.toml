@@ -1,0 +1,13 @@
+[project]
+name = "mindvault-backend"
+version = "0.0.0"
+description = "MindVault backend foundation"
+requires-python = ">=3.13"
+dependencies = []
+
+[tool.ruff]
+target-version = "py313"
+
+[tool.mypy]
+python_version = "3.13"
+strict = true
