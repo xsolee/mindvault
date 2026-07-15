@@ -46,7 +46,7 @@ Create the initial repository structure, project instructions, engineering workf
 
 ## M1-002 — FastAPI Application Foundation
 
-* **Status:** Approved
+* **Status:** Completed
 * **Specification:** `docs/tasks/M1-002-fastapi-application-foundation.md`
 * **Depends On:** M1-001 — Project Bootstrap
 
@@ -85,24 +85,15 @@ Integrate PostgreSQL, SQLAlchemy 2, Alembic, database sessions, and readiness ch
 ### Completed
 
 * M1-001 — Project Bootstrap
+* M1-002 — FastAPI Application Foundation
 
 ### Approved and Ready
 
-* M1-002 — FastAPI Application Foundation
+* None
 
 ### Next Action
 
-Implement:
-
-```text
-docs/tasks/M1-002-fastapi-application-foundation.md
-```
-
-using:
-
-```text
-docs/engineering/codex-workflow.md
-```
+Prepare and approve M1-003 — PostgreSQL Foundation before implementation.
 
 ## Task Execution Rule
 
