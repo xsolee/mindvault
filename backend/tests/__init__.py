@@ -1,1 +1,0 @@
-"""MindVault backend test suite."""

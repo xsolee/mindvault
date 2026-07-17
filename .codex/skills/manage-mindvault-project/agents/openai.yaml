@@ -1,0 +1,4 @@
+interface:
+  display_name: "MindVault Project Manager"
+  short_description: "Plan milestones, scope, risks, and handoffs"
+  default_prompt: "Use $manage-mindvault-project to turn an approved MindVault requirement into a milestone plan."

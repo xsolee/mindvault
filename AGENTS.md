@@ -1,37 +1,46 @@
 # MindVault Engineering Guidelines
 
-MindVault is a production-quality SaaS application for AI-powered personal knowledge management.
+MindVault is a production-quality SaaS application for personal knowledge capture and retrieval.
 
-## Before Coding
+## Source of truth
 
-1. Read `README.md` and all relevant documentation under `docs/`.
-2. Read the assigned task specification in full.
-3. Follow the approved architecture and existing engineering workflow.
-4. Report missing or conflicting source-of-truth documentation before making assumptions.
+Before changing code or documentation, read `README.md`, the relevant documents under `docs/`, and the assigned task specification in full. Report missing, contradictory, or unapproved requirements before implementation.
 
-## Scope and Design
+Priority order:
 
-- Implement only the assigned task; never add speculative or future-milestone features.
-- Prefer simple, readable solutions over unnecessary abstractions.
-- Keep business logic framework-independent whenever practical.
-- Preserve boundaries between frameworks, databases, storage services, queues, and AI providers.
-- Do not couple the application to a single LLM, embedding, storage, or transcription provider.
-- Maintain production-quality, secure, and testable code.
+1. Explicit user decision
+2. Approved task specification and acceptance criteria
+3. Accepted ADRs and architecture documents
+4. Product documentation
+5. Engineering guidelines
 
-## Implementation Standards
+Do not convert an example, deployment preference, or open question into an approved requirement.
 
-- Use Python 3.13 and type hints for all Python code.
-- Follow the coding and testing standards under `docs/engineering/`.
-- Write appropriate unit and integration tests for new functionality.
-- Never commit secrets; use environment variables and document them in `.env.example`.
-- Preserve existing work and avoid unrelated changes.
+## Delivery rules
 
-## Documentation and Decisions
+- Work on one approved task at a time.
+- Implement only the assigned scope; do not add future features.
+- Prefer simple, readable designs and framework-independent business rules.
+- Preserve boundaries around databases, storage, queues, transcription, embeddings, and LLM providers.
+- Use Python 3.13 with type hints and strict TypeScript.
+- Add proportionate unit, integration, and end-to-end tests.
+- Never commit secrets. Document configuration in `.env.example`.
+- Keep behavior and architecture documentation synchronized.
+- Record consequential decisions under `docs/adr/`.
 
-- Keep documentation synchronized when architecture or behavior changes.
-- Record significant architectural decisions as ADRs under `docs/adr/`.
-- Do not redefine approved architecture within an implementation task.
+## Roles and delegation
+
+The main agent is the technical lead and integrator. It owns requirement clarification, architecture coherence, task assignment, integration, and completion reporting.
+
+Use the repository skills for bounded specialist work:
+
+- `$manage-mindvault-project`: planning, scope, acceptance criteria, dependencies, and status
+- `$build-mindvault-backend`: approved backend design and implementation
+- `$build-mindvault-frontend`: approved frontend design and implementation
+- `$verify-mindvault-quality`: independent verification and defect reporting
+
+Subagents may be used when the user explicitly requests delegation or parallel work. Give each agent non-overlapping file ownership and a bounded deliverable. The main agent must review and integrate all results. Specialist agents cannot approve product scope or architecture changes.
 
 ## Completion
 
-Run applicable linting, type checks, tests, and builds. Report files changed, validation results, assumptions, risks, and recommended follow-up work.
+Run applicable formatting, linting, type checks, tests, and builds. Report changed files, actual validation results, assumptions, risks, and recommended follow-up work.

@@ -1,0 +1,4 @@
+interface:
+  display_name: "MindVault QA Engineer"
+  short_description: "Verify acceptance criteria and product quality"
+  default_prompt: "Use $verify-mindvault-quality to test an implemented MindVault task against its acceptance criteria."

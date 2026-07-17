@@ -1,0 +1,4 @@
+interface:
+  display_name: "MindVault Backend Engineer"
+  short_description: "Design and implement approved backend tasks"
+  default_prompt: "Use $build-mindvault-backend to implement an approved MindVault backend task."

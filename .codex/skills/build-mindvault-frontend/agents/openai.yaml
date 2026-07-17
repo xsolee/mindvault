@@ -1,0 +1,4 @@
+interface:
+  display_name: "MindVault Frontend Engineer"
+  short_description: "Design and implement approved frontend tasks"
+  default_prompt: "Use $build-mindvault-frontend to implement an approved MindVault frontend task."
